@@ -23,3 +23,11 @@ def calculateHeatIndex(RH, T):
 if __name__ == '__main__':
     # Call the function in here if you want to test it
     # Make sure it's indented
+    print('(45, 108) = ' + str(calculateHeatIndex(45, 108)))
+    print('(65, 80) = ' + str(calculateHeatIndex(65, 80)))
+    print('(65, 90) = ' + str(calculateHeatIndex(65, 90)))
+    print('(60, 100) = ' + str(calculateHeatIndex(60, 100)))
+    print('(95, 80) = ' + str(calculateHeatIndex(95, 80)))
+    print('(100, 90) = ' + str(calculateHeatIndex(100, 90)))
+    print('(80, 94) = ' + str(calculateHeatIndex(80, 94)))
+    print('(70, 98) = ' + str(calculateHeatIndex(70, 98)))

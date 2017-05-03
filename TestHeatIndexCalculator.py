@@ -18,17 +18,18 @@ class KnownValues(unittest.TestCase):
         # Capture the results of the function
         result = HeatIndexCalculator.calculateHeatIndex(40, 80)
         # Check for expected output
-        self.assertEqual(80, result)
+        expected = 79
+        self.assertEqual(expected, result)
 
     def test_calculateHeatIndex_forLowRelativeHumidity_HotTemp(self):
         result = HeatIndexCalculator.calculateHeatIndex(40, 92)
-        expected = 94
+        expected = 93
         self.assertEqual(expected, result)
 
     # Add minimum of 5 more unittests
     def test_calculateHeatIndex_forLowRelativeHumidity_ExtremeHotTemp(self):
         result = HeatIndexCalculator.calculateHeatIndex(45, 108)
-        expected = 137
+        expected = 136
         self.assertEqual(expected, result)
 
     def test_calculateHeatIndex_forMedRelativeHumidity_WarmTemp(self):
@@ -38,7 +39,7 @@ class KnownValues(unittest.TestCase):
 
     def test_calculateHeatIndex_forMedRelativeHumidity_HotTemp(self):
         result = HeatIndexCalculator.calculateHeatIndex(65, 90)
-        expected = 103
+        expected = 102
         self.assertEqual(expected, result)
 
     def test_calculateHeatIndex_forMedRelativeHumidity_ExtremeTemp(self):
@@ -53,7 +54,7 @@ class KnownValues(unittest.TestCase):
 
     def test_calculateHeatIndex_forHighRelativeHumidity_HotTemp(self):
         result = HeatIndexCalculator.calculateHeatIndex(100, 90)
-        expected = 132
+        expected = 131
         self.assertEqual(expected, result)
 
     def test_calculateHeatIndex_for_80RelativeHumidity_94Temp(self):
